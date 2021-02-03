@@ -20,7 +20,7 @@ Good Luck !!!
 // Define UI Variables  here 
 const href=location.href;
 const protocol=location.protocol;
-const host=location.hostname;
+const host=location.host;
 const port=location.port;
 const hostname=location.hostname;
 
