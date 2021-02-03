@@ -13,7 +13,9 @@ ac.addEventListener('click',allclear)
 equal.addEventListener('click',calculate)
 
 function radfun(){
-    inputs.value = (Math.sqrt(Number(inputs.value))).toString()
+    let result = calculate()
+    console.log(result)
+    inputs.value = (Math.sqrt(Number(result))).toString()
 }
 function squfun(){
     inputs.value=(Number(inputs.value)*Number(inputs.value)).toString()
@@ -39,7 +41,6 @@ buttons.forEach(but => {
      index=0
      let ans = 0
      while (index<inputs.value.length){
-         console.log(inputs.value.charAt(index))
          if (inputs.value.charAt(index) =="+" || inputs.value.charAt(index) =="-" || inputs.value.charAt(index) =="*" || inputs.value.charAt(index) =="/") {
 
              final.push(curr)
@@ -53,7 +54,6 @@ buttons.forEach(but => {
      }
      final.push(curr)
      index=0
-     console.log(final)
      while(index<final.length-1){
          
         let num1 = final[index]
@@ -82,6 +82,7 @@ buttons.forEach(but => {
          
      }
      inputs.value=final[final.length-1]
+     return final[final.length-1]
  }
 
 
